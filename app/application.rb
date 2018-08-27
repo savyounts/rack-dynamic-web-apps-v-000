@@ -3,9 +3,9 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    num1 = Kernel.rand(1..20)
-    num2 = Kernel.rand(1..20)
-    num3 = Kernel.rand(1..20)
+    num1 = Kernel.rand(1)
+    num2 = Kernel.rand(1)
+    num3 = Kernel.rand(1)
 
     resp.write "#{num1}\n"
     resp.write "#{num2}\n"
@@ -16,7 +16,7 @@ class Application
     else
       resp.write "You Lose"
     end
-    
+
     resp.finish
   end
 
